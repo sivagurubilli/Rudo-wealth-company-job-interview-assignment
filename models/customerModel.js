@@ -6,7 +6,7 @@ const customer = new mongoose.Schema({
     currentLocation:{type:String,required:true},
     numberofRides:{type:Number,required:true},
     averageRating:{type:Number,required:true},
-   
+   distance:{type:Nummber,required:true},
 })
 
 module.exports = mongoose.model("customer",customer)

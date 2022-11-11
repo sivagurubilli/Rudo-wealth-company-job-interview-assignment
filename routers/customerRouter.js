@@ -2,7 +2,7 @@ const customer = require("../models/customerModel")
 const router = require("express").Router();
 
  // get the all customers data
- 
+
  router.get("/",async(req,res)=>{
     const allCustomers = await customer.find()
     return res.send({customers:allCustomers})
@@ -16,12 +16,12 @@ router.post("/create",async(req,res)=>{
     try{
       
    const {fullName,currentLocation,numberofRides,
-    averageRating} = req.body;
+    averageRating,distance} = req.body;
     
 
 let newcustomer = new customer({
     fullName,currentLocation,numberofRides,
-    averageRating
+    averageRating,distance
 })
  await newcustomer.save()
 res.status(200).send("customer created succesfully")
@@ -38,12 +38,13 @@ res.status(200).send("customer created succesfully")
 router.put("/:id",async(req,res)=>{
     try{
         const {fullName,currentLocation,numberofRides,
-            averageRating} = req.body;
+            averageRating,distance} = req.body;
     await customer.findByIdAndUpdate({_id:req.params.id},
         {    fullName:fullName,
             currentLocation:currentLocation,
             numberofRides:numberofRides,
-            averageRating:averageRating  }
+            averageRating:averageRating,
+        distance:distance }
         ,{new:true})
         return res.send({message:"successfully updated"})
     }catch(err){

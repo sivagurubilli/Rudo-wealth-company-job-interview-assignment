@@ -1,7 +1,7 @@
 const cruiser = require("../models/cruiserModel")
 const router = require("express").Router();
 
- // get the all customers data
+ // get the all cruisers data available on database
  
  router.get("/",async(req,res)=>{
     const allCruiser= await cruiser.find()
@@ -10,7 +10,7 @@ const router = require("express").Router();
 
 
 
-//post the new customer data
+//post the new cruiser data
 
 router.post("/create",async(req,res)=>{
     try{
@@ -33,7 +33,7 @@ res.status(200).send("cruiser created succesfully")
 
 });
 
-//edit customer by id 
+//edit cruiser by id 
 
 router.put("/:id",async(req,res)=>{
     try{
@@ -49,7 +49,7 @@ router.put("/:id",async(req,res)=>{
     }
 })
 
-// delete customer by id
+// delete cruiser by id
 
 router.delete("/:id",async(req,res)=>{
     try{
