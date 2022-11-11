@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "rudo wealth assignment",
   "main": "index.js",
+  "preferGlobal": true,
+  "bin":"./cli.js",
   "scripts": {
     "start": "nodemon index.js"
   },

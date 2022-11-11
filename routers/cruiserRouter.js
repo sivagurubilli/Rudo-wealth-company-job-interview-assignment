@@ -1,11 +1,11 @@
-const customer = require("../models/customerModel")
+const cruiser = require("../models/cruiserModel")
 const router = require("express").Router();
 
  // get the all customers data
  
  router.get("/",async(req,res)=>{
-    const allCustomers = await customer.find()
-    return res.send({customers:allCustomers})
+    const allCruiser= await cruiser.find()
+    return res.send({cruisers:allCruiser})
 })
 
 
@@ -15,16 +15,16 @@ const router = require("express").Router();
 router.post("/create",async(req,res)=>{
     try{
       
-   const {fullName,currentLocation,numberofRides,
-    averageRating} = req.body;
+   const {name,email,mobileno,driver,
+    rating} = req.body;
     
 
 let newcustomer = new customer({
-    fullName,currentLocation,numberofRides,
-    averageRating
+    name,email,mobileno,driver,
+    rating
 })
  await newcustomer.save()
-res.status(200).send("customer created succesfully")
+res.status(200).send("cruiser created succesfully")
 
 }catch(err){
         console.log(err)
@@ -37,13 +37,11 @@ res.status(200).send("customer created succesfully")
 
 router.put("/:id",async(req,res)=>{
     try{
-        const {fullName,currentLocation,numberofRides,
-            averageRating} = req.body;
-    await customer.findByIdAndUpdate({_id:req.params.id},
-        {    fullName:fullName,
-            currentLocation:currentLocation,
-            numberofRides:numberofRides,
-            averageRating:averageRating  }
+        const {name,email,mobileno,driver,
+            rating} = req.body;
+    await cruiser.findByIdAndUpdate({_id:req.params.id},
+        {  name:name,email:email,mobileno:mobileno,driver:driver,
+            rating:rating }
         ,{new:true})
         return res.send({message:"successfully updated"})
     }catch(err){
@@ -55,7 +53,7 @@ router.put("/:id",async(req,res)=>{
 
 router.delete("/:id",async(req,res)=>{
     try{
-        await customer.findByIdAndDelete(req.params.id)
+        await cruiser.findByIdAndDelete(req.params.id)
         return res.send({message:"successfully deleted"})
     }catch(err){
         res.status(500).send("internal error")
