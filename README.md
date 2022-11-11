@@ -1,9 +1,10 @@
 # Rudo-wealth
  ## This Project is usefull for making Cruise travel easy with digital adoption 
- ## ConCruise is a boat-sharing Platform based in Russia that provides boat rides across rivers from 1 side of riverr to other 
+ ## ConCruise is a boat-sharing Platform based in Russia that provides boat rides across rivers from one side of river to other side of river.
  
  ##  **Deployed Link** for this app - https://rudo-wealth.herokuapp.com/
- 
+ ##  **For Get all customers list use this link ** -  https://rudo-wealth.herokuapp.com/customers
+ ##  **For Get all cruises list use this link ** -  https://rudo-wealth.herokuapp.com/cruisers
  
 <br/>
  <h2>Tools and Packages used in this Project   :</h2> 
@@ -29,14 +30,11 @@ Once you have that, run following commands to get the project up and running:
     git clone https://github.com/sivagurubilli/Rudo-wealth.git
     cd Rudo-wealth
     npm  install
-    npm start
-    Runs the app in developement mode.
-    Open https://localhost:5173 to view it in browser.
-    The page will reload when you make changes.
+    If u want to run on cli run this command node/cli.js
+    If u want to get all customers list node/cli.js customers
+    And if u want to get all cruisers list node/cli.js cruisers
+   
     You may also seen any lint errors in the console.
-    
- ###  For build the apllication :
-      npm run build
-      It correctly bundles React in production mode and optimizes the build for the best Performance.
+
 
 <h1>Thank you </h1>
