@@ -20,7 +20,11 @@ mongoose.connect("mongodb+srv://gurubilli:gurubilli@cluster0.dlpod.mongodb.net/R
     console.log("connected to mongodb")
 })
 
-
+app.get("/",(req,res)=>{
+    return res.status(200).send({
+   "for customers data go to" :"/customers",
+    })
+})
 // routers
 app.use("/customers",require("./routers/customerRouter"))
 app.use("/cruisers",require("./routers/cruiserRouter"))
