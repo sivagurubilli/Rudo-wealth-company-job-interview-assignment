@@ -3,8 +3,8 @@
  ## ConCruise is a boat-sharing Platform based in Russia that provides boat rides across rivers from one side of river to other side of river.
  
  ##  **Deployed Link** for this app - https://rudo-wealth.herokuapp.com/
- ##  **For Get all customers list use this link ** -  https://rudo-wealth.herokuapp.com/customers
- ##  **For Get all cruises list use this link ** -  https://rudo-wealth.herokuapp.com/cruisers
+ ##   For Get all customers list use this link -  https://rudo-wealth.herokuapp.com/customers
+ ##   For Get all cruises list use this link  -  https://rudo-wealth.herokuapp.com/cruisers
  
 <br/>
  <h2>Tools and Packages used in this Project   :</h2> 
